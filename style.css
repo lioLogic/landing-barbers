@@ -1,0 +1,856 @@
+/* Base general */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  line-height: 1.5;
+  background-color: rgb(94, 94, 94);
+}
+
+main {
+  flex: 1;
+}
+
+/* Media responsive por defecto */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Estructura mobile-first */
+header,
+main,
+section,
+footer {
+  padding: 1rem;
+}
+
+/* La edición para el logo va aquí */
+.logo-container {
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.logo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Aquí se editan todo tipo de textos */
+h1,
+h2,
+h3,
+p,
+ul {
+  margin: 0 0 1rem;
+}
+
+.header-text h1 {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: rgb(0, 0, 0);                
+  -webkit-text-stroke: 0.3px rgba(168, 168, 168, 0.767);
+}
+  
+
+.header-text p {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: rgb(218, 218, 218);
+}
+
+main h2 {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 35px;
+}
+
+main h3 {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: #000000;
+}
+
+main p {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: rgba(255, 255, 255, 0.995);
+  -webkit-text-stroke: 1.5px rgba(0, 0, 0, 0.342);
+}
+
+.precios h2 {
+  color: rgba(255, 255, 255, 0.797);
+  text-align: center;
+  background-color: #00000093;
+  padding: 8px;
+  border-radius: 3px;
+}
+
+.palabra {
+  color: #abf205ad;
+}
+
+.precios h3 {
+  color: rgba(253, 253, 250, 0.779);
+}
+
+.horarios p {
+  color: rgb(255, 255, 255);
+}
+
+.ubicacion p {
+  color: aliceblue;
+}
+
+
+footer h2 {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.contactos,
+.redes h2 {
+  text-decoration: underline 1px solid;
+  text-underline-offset: 4px;
+
+}
+
+footer p {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.galeria {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.galeria-trabajo h2 {
+  color: #bababae9;
+  text-align: center;
+  border: #000000 solid 1px;
+  background-color: #00000086;
+  border-radius: 3px;
+}
+
+.servicios h2 {
+  text-align: center;
+  font-size: 28px;
+}
+
+.titulo-servicios-wrap {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin: 24px 0;
+  overflow: hidden;
+}
+
+.titulo-servicios {
+  position: relative;
+  z-index: 2;
+  margin: 0;
+  padding: 8px 16px;
+  color: rgba(202, 202, 202, 0.806);
+}
+
+.titulo-servicios-wrap::before {
+  content: "";
+  position: absolute;
+  width: 280px;
+  height: 200px;
+  background: url("images/manchatitulo.png") center / contain no-repeat;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-20deg);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.card1 h3 {
+  color: aliceblue;
+}
+
+.contacto-form input {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  color: #ffffffd2;
+}
+
+.contacto-form textarea {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #ffffffd2;
+}
+
+.contacto-form button {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.contenedor-turnos h2 {
+  color: #e7e7e7;
+  text-align: center;
+  border: #000000a2 solid 1px;
+  background-color: #00000086;
+  border-radius: 3px;
+}
+
+.contenedor-turnos input,
+.contenedor-turnos button  {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #ffffffd2;
+}
+
+.contenedor-turnos select {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #ffffffd2;
+  background-color: #1a1212c4;
+  height: 50px;
+  text-align: center;
+  border-radius: 4px;
+  border-color: #000000;
+}
+
+/* Edición de las tarjetas */
+
+.card1 {
+  border: solid;
+  padding: 15px;
+  margin-bottom: 5px;
+  border-width: 1px;
+  border-radius: 5px;
+  background-color: rgba(48, 38, 38, 0.596);
+}
+
+.cards-servicios {
+  margin-top: 50px;
+}
+
+.card2 {
+  border: solid;
+  border-width: 1px;
+  border-radius: 2px;
+  padding: 12px 15px;
+  margin-bottom: 5px;
+}
+
+.card2 h3 {
+  margin: 0;
+  line-height: 1.3;
+}
+
+.precios {
+  border: solid;
+  border-color: rgba(94, 52, 1, 0.276);
+  border-width: 1px;
+  border-radius: 2px;
+  height: auto;
+  padding: 4px 4px 10px;
+  margin-top: 15px;
+  background-color: #1111115f;
+}
+
+.horarios {
+  border: solid;
+  border-color: 3px rgba(94, 52, 1, 0.276);
+  border-width: 1px;
+  border-radius: 5px;
+  height: auto;
+  padding: 15px;
+  margin-top: 40px;
+  background-color: #4a340369;
+}
+
+.ubicacion {
+  border: solid;
+  border-color: 3px rgba(0, 0, 0, 0.276);
+  border-width: 1px;
+  border-radius: 5px;
+  height: auto;
+  padding: 15px;
+  margin-top: 25px;
+  background-color: #4a340369;
+}
+
+.galeria-item {
+  border: solid;
+  border-color: rgba(37, 37, 37, 0.906);
+  background-color: #000000a2;
+  border-width: 1px;
+  border-radius: 2px;
+  height: 250px;
+  padding: 5px 5px 5px;
+  margin-bottom: 8px;
+}
+
+article {
+  overflow: hidden;
+}
+
+.card1,
+.card2,
+.galeria-item {
+  width: 100%;
+  max-width: none;
+}
+
+article img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+img {
+  border-radius: 3px;
+}
+
+.galeria-trabajo {
+  margin-top: 60px;
+}
+
+.contactos {
+  margin-top: 10px;
+}
+
+hr {
+  border: none;
+  height: 2px;
+  background: linear-gradient(to right, transparent, #000000, transparent);
+  margin-top: 80px;
+}
+
+footer {
+  background-color: #0000003a;
+  width: 100%;
+  margin-top: auto;
+  margin-bottom: 0;
+}
+
+.contacto-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 420px;
+  margin: 0 auto;
+  
+}
+
+.contacto-form input,
+.contacto-form textarea {
+  width: 100%;
+  padding: 10px 12px;
+  background-color: #00000031;
+  border-color: #000000e1;
+}
+
+.contacto-form button {
+  width: fit-content;
+  align-items: center;
+  align-self: center;
+  padding: 8px 55px;
+
+  background-color: #00000031;
+  border-color: #000000e1;
+  color: #dad7d76b;
+}
+
+.contacto-form h2 {
+  text-decoration: underline 1px;
+  text-underline-offset: 4px;
+}
+
+/* Los botones de facebook e instagram van aquí */
+
+.icono-red img {
+  width: 100px;
+  height: 100px;
+  display: block;
+}
+
+.contenedor-redes {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-right: 0;
+  flex-wrap: wrap;
+}
+
+.contactos a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Acá es el lugar del boton de whatsapp */
+
+.contenedor-whatsapp {
+  position: fixed;
+  left: 315px;
+  bottom: 20px;
+  z-index: 1000;
+}
+
+.icono-whatsapp {
+  width: 120px;
+  height: 120px;
+  display: block;
+}
+
+/* Acá es el lugar del formulario de turnos */
+
+.contenedor-turnos form {
+  width: 100%;
+  padding: 10px 12px;
+  background-color: #00000031;
+  border-color: #000000e1;
+} 
+
+.contenedor-turnos input {
+  width: 100%;
+  height: 60px;
+  padding: 10px 12px;
+  background-color: #00000031;
+  border-color: #000000e1;
+  border-radius: 2px;
+}
+
+.contenedor-turnos button {
+  width: fit-content;
+  align-items: center;
+  align-self: center;
+  padding: 8px 55px;
+  margin-top: 4px;
+
+  background-color: #00000031;
+  border-color: #000000e1;
+  color: #fefafa;
+}
+
+.contenedor-turnos input.fecha {
+  background-color: #ffffff;
+}
+/* Éste es el lugar de las proporciones de pantallas */
+
+/* Desktop */
+@media (min-width: 1024px) {
+  html {
+    font-size: 25px; /* si lo quer�s as� de grande */
+  }
+
+  .site-header,
+  main,
+  footer {
+    width: min(100% - 10rem, 6000px);
+    margin-inline: auto;
+  }
+  
+  .site-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 28px;
+  }
+
+  .logo-container {
+    width: 700px;
+    height: 700px;
+    flex: 0 0 700px;
+  }
+
+  .logo {
+    width: 100%;
+    height: 100%;
+  }
+
+  .header-text {
+    max-width: 1350px;
+  }
+
+  .header-text h1 {
+    font-size: clamp(3.4rem, 5vw, 5.2rem);
+    margin-top: 60px;
+  }
+
+  .header-text p {
+    font-size: 3.35rem;
+  }
+
+  /* Título Servicios + mancha en desktop */
+.titulo-servicios-wrap {
+  width: fit-content;
+  margin: 32px auto;
+  overflow: visible; /* importante: que la mancha pueda crecer */
+  margin-top: 250px;
+}
+
+.servicios .titulo-servicios {
+  font-size: clamp(3rem, 4vw, 4.5rem);
+  padding: 18px 34px;
+  line-height: 1;
+  position: relative;
+  z-index: 2;
+}
+
+.titulo-servicios-wrap::before {
+  width: 1350px;
+  height: 1250px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-12deg);
+  z-index: 1;
+}
+
+  .cards-servicios,
+  .precios .cards {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .card2 {
+    background-color: #00000087;
+  }
+
+  .card1,
+  .card2 {
+    margin-bottom: 0;
+  }
+
+  .galeria {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .galeria-item {
+    height: auto;
+    aspect-ratio: 4 / 3;
+  }
+
+  .galeria-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px;
+    align-items: start;
+
+    width: 100%;
+    max-width: none;
+    margin-inline: 0;
+  }
+
+  footer h2 {
+  font-size: 2.2rem;
+  }
+
+  footer p,
+  footer a,
+  footer input,
+  footer textarea,
+  footer button {
+    font-size: 2.15rem;
+  }
+
+  .contacto-form h2 {
+    color: #ffffffda;
+    font-size: 90px;
+  }
+
+  .card1 h3 {
+    font-size: 2.8rem;
+  }
+
+  .palabra {
+    color: #65c9076d;
+  }
+
+  footer section {
+    padding: 45px;
+  }
+
+  .icono-red img {
+    width: 300px;
+    height: 300px;
+  }
+
+  footer .redes {
+    justify-self: start;
+    padding-left: 0;
+  }
+
+  footer .contenedor-redes {
+    display: flex;
+    justify-content: flex-start;
+    width: fit-content;
+    margin-right: 150px;        
+  }
+
+  .contacto-form button {
+    padding: 12px 70px;
+  }
+
+
+  .contactos,
+  .redes,
+  .contacto-form {
+    margin-top: 0;
+  }
+
+
+  main h2 {
+    font-size: 4.2rem;
+  }
+
+  main h3 {
+    font-size: 5rem;
+  }
+
+  main p {
+    font-size: 1.95rem;
+    line-height: 1.5;
+  }
+
+  .card1,
+  .card2,
+  .horarios,
+  .ubicacion,
+  .precios {
+    padding: 60px;
+    margin-top: 200px;
+  }
+
+  .contacto-form form {
+    max-width: 100%;
+  }
+
+  .contenedor-whatsapp {
+    position: fixed;
+    left: 4750px;
+    bottom: 20px;
+    z-index: 1000;
+  }
+
+  .icono-whatsapp {
+    width: 700px;
+    height: 700px;
+    display: block;
+  }
+
+  .icono-whatsapp img{
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  .contenedor-turnos {
+    display: block;
+    width: 1800px;
+  }
+
+  .contenedor-turnos input,
+  .contenedor-turnos select {
+    height: 150px;
+  }
+
+  .contenedor-turnos select {
+    width: 888px;
+    font-size: 50px;
+    text-align: center;
+  }
+
+  .contenedor-turnos input  {
+    font-size: 60px;
+    color: #ffffff;
+  }
+
+  .contenedor-turnos button {
+    padding: 15px;
+    width: 300px;
+    height: 150px;
+    text-align: center;
+    font-size: 60px;
+
+    border: solid #000000 1px
+  }
+
+  /* Esto es el visor de imagen */
+
+  .visor {
+    position: fixed;
+    inset: 0;
+    display: none;                
+    justify-content: center;
+    align-items: center;
+    padding: 6px;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 999;
+  }
+
+  .visor.abierto {
+    display: flex;            
+  }
+
+  #visor-img {
+    width: min(96vw, 1600px);
+    max-height: 92vh;
+    object-fit: contain;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  }
+
+  #visor-img.pop-in {
+    animation: popIn 420ms cubic-bezier(.2,.8,.2,1);
+  }
+
+  @keyframes popIn {
+    0%   { transform: scale(0.9); opacity: 0; }
+    70%  { transform: scale(1.08); opacity: 1; } 
+    100% { transform: scale(1); }
+  }
+  
+}
+
+/* Celular chico */
+@media (max-width: 480px) {
+  .site-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 35px;
+  }
+
+  .logo-container {
+    width: 120px;
+    height: 120px;
+  }
+
+  .header-text {
+    font-size: 1.5rem;
+  }
+
+}
+
+/* Acá es la seccion del fondo de la web */
+
+html,
+body {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+  background: #000000; /* fallback */
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0; /* evita bordes por blur */
+  background: url("images/vintage-paper-with-beard-shaping-salon-tools.jpg") center center / cover no-repeat;
+  filter: blur(5px);
+  transform: scale(1.02);
+  z-index: -2;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35); /* capa oscura para legibilidad */
+  z-index: -1;
+}
+
+header,
+main,
+footer {
+  position: relative;
+  z-index: 1;
+}
+
+/* Esto es el visor de imagen */
+
+.visor {
+  position: fixed;
+  inset: 0;
+  display: none;                
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 999;
+}
+
+.visor.abierto {
+  display: flex;            
+}
+
+#visor-img {
+  width: min(92vw, 900px);
+  max-height: 85vh;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+#visor-img.pop-in {
+  animation: popIn 420ms cubic-bezier(.2,.8,.2,1);
+}
+
+@keyframes popIn {
+  0%   { transform: scale(0.9); opacity: 0; }
+  70%  { transform: scale(1.08); opacity: 1; } 
+  100% { transform: scale(1); }
+}
+
+@media (min-width: 1024px) {
+  .visor {
+    padding: 3px;
+  }
+
+  #visor-img {
+    width: min(97vw, 1900px);
+    max-height: 92vh;
+  }
+}
+
+
