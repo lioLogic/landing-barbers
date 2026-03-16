@@ -106,10 +106,11 @@
           </article>
         </div>
       </section>
+<!-- Acá está el formulario de turnos -->      
   
       <section class="contenedor-turnos">
         <h2>Reserva tu turno ahora</h2>
-        <form id="form-turnos" action="https://formsubmit.co/pruebacorreomidi12@gmail.com" method="POST">
+        <form id="serviciosForm" name="serviciosForm" netlify>
           <input type="text" name="nombre" placeholder="Tu nombre" required />
           <input type="text" name="apellido" placeholder="Tu apellido" required />
           <input type="tel" name="telefono" placeholder="Teléfono" required />
@@ -164,8 +165,7 @@
         <input type="text" name="email" placeholder="Tu email" required />
         <textarea name="mensaje" placeholder="Escribe tu mensaje" rows="5" required></textarea>
         <button type="submit">Enviar</button>
-        <input type="hidden" name="_next" value="https://tu-dominio.com/#contacto">
-        <input type="hidden" name="_captcha" value="false">
+
 
       </form>
       </section>
