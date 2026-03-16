@@ -69,13 +69,11 @@ if (serviciosForm) {
         return;
     }
 
-    serviciosForm.submit();
-
   const formData = new FormData(serviciosForm);
 
   fetch("/", {
     method: "POST",
-    headers: { "Content-Type": "application/x-www-form-urlendcoded"
+    headers: { "Content-Type": "application/x-www-form-urlencoded"
     },
     body: new URLSearchParams(formData).toString()
   })
