@@ -70,5 +70,22 @@ if (serviciosForm) {
     }
 
     serviciosForm.submit();
+
+  const formData = new FormData(serviciosForm);
+
+  fetch("/", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlendcoded"
+    },
+    body: new URLSearchParams(formData).toString()
+  })
+  .then(() => {
+    serviciosForm.reset();
+    alert("¡Mensaje enviado!");
+  })
+  .catch(() => {
+    alert("hubo un error, intenta de nuevo.");
   });
+
+});
 }
