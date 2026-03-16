@@ -29,7 +29,7 @@ visor.addEventListener("click", function () {
 
 // Aquí va el formulario de turnos //
 
-const serviciosForm = document.getElementById("form-turnos");
+const serviciosForm = document.getElementById("serviciosForm");
 
 if (serviciosForm) {
     serviciosForm.addEventListener("submit", (e) => {
