@@ -32,8 +32,8 @@ visor.addEventListener("click", function () {
 const serviciosForm = document.getElementById("form-turnos");
 
 if (serviciosForm) {
-    serviciosForm.addEventListener("submit", function (event) {
-    event.preventDefault();
+    serviciosForm.addEventListener("submit", (e) => {
+    e.preventDefault();
 
     // lectura de values //
     const nombre = serviciosForm.nombre.value.trim();
