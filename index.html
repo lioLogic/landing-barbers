@@ -10,105 +10,77 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!--Acá va a ir los elementos de la cabecera de la web-->
+<!--Acá va a ir los elementos de la cabecera de la web-->
     <header class="site-header">
       <div class="logo-container">
         <img src="images/Logo.jpg" alt="Logo de la barbería" class="logo" />
       </div>
-      <!--Acá van a ir los textos de presentación de la web-->
+<!--Acá van a ir los textos de presentación de la web-->
       <div class="header-text">
         <h1>El Corte del Barrio</h1>
         <p>
-          Estilo, precisión y actitud en cada corte: en nuestra barbería tu
+          Estilo, precisión y actitud en cada corte:<br>en nuestra barbería tu
           imagen habla antes que tú.
         </p>
       </div>
     </header>
-
-    <!-- Sección de servicios, precios, horarios, ubicación, contacto, galeria -->
+<!-- Sección de servicios, precios, horarios, ubicación, contacto, galeria -->
     <main>
-      <!-- Esta sección es de los servicios -->
+<!-- Esta sección es de los servicios -->
+      <div class="bloque-izquierdo">
       <section class="servicios">
-        <div class="titulo-servicios-wrap">
-            <h2 class="titulo-servicios">Servicios</h2>
+        <div class="titulo-servicios">
+            <h2>Servicios</h2>
         </div>
-      
-      
         <div class="cards-servicios">
           <article class="card1" data-target="corte">
             <h3>Corte de cabello</h3>
             <p>Estilo clásico o moderno según tu look.</p>
           </article>
-
           <article class="card1" data-target="afeitado">
             <h3>Afeitado clásico</h3>
             <p>Afeitado tradicional con toalla caliente.</p>
           </article>
-
           <article class="card1" data-target="arreglo">
             <h3>Arreglo de barba</h3>
             <p>Perfilado y diseño prolijo de barba.</p>
           </article>
-
           <article class="card1" data-target="tratamiento">
             <h3>Tratamientos capilares</h3>
             <p>Cuidado y nutrición para tu cabello.</p>
           </article>
         </div>
       </section>
-
-      <!-- Esta es la sección de los precios -->
+<!-- Esta es la sección de los precios -->
       <section class="precios">
+      <div class="recuadro-precios">
         <h2>Precios</h2>
-        <div class="cards">
+      <div class="cards">
           <article class="card2">
-            <h3>Corte de cabello <span class="palabra">$15</span></h3>
+            <h3>Corte de cabello</h3>
+            <span class="palabra">$15</span>
           </article>
 
           <article class="card2">
-            <h3>Afeitado clásico <span class="palabra">$10</span></h3>
+            <h3>Afeitado clásico</h3>
+            <span class="palabra">$10</span>
           </article>
 
           <article class="card2">
-            <h3>Arreglo de barba <span class="palabra">$12</span></h3>
+            <h3>Arreglo de barba</h3>
+            <span class="palabra">$12</span>
           </article>
 
           <article class="card2">
-            <h3>Tratamientos capilares <span class="palabra">$20</span></h3>
+            <h3>Tratamientos capilares</h3>
+            <span class="palabra">$20</span>
           </article>
         </div>
-      </section>
-
-      <section class="horarios">
-        <h2>Horario</h2>
-        <p>Lunes a sábado: 9:00 AM - 7:00 PM. Domingos NO TRABAJAMOS</p>
-      </section>
-
-      <section class="ubicacion">
-        <h2>Ubicación</h2>
-        <p>Av. Siempre Viva 123, Ciudad Ejemplo</p>
-      </section>
-
-      <section class="galeria-trabajo">
-        <h2>Nuestros trabajos</h2>
-        <div class="galeria">
-          <article class="galeria-item corte-cabello" id="corte">
-            <img src="images/cortedecabello.jpg" alt="Corte de cabello moderno" />
-          </article>
-          <article class="galeria-item afeitado-clasico" id="afeitado">
-            <img src="images/afeitadoclasico.jpg" alt="Afeitado clásico" />
-          </article>
-          <article class="galeria-item arreglo-barba" id="arreglo">
-            <img src="images/arreglodebarba.jpg" alt="Arreglo de barba" />
-          </article>
-          <article class="galeria-item tratamiento-capilar" id="tratamiento">
-            <img src="images/tratamientocapilar.jpg" alt="Tratamiento capilar" />
-          </article>
         </div>
       </section>
-<!-- Acá está el formulario de turnos -->        
       <section class="contenedor-turnos">
         <h2>Reserva tu turno ahora</h2>
+        <div class="contenedor-form">
         <form id="serviciosForm" name="serviciosForm" netlify>
           <input type="text" name="nombre" placeholder="Tu nombre" required />
           <input type="text" name="apellido" placeholder="Tu apellido" required />
@@ -124,64 +96,103 @@
           </select>
           <button type="submit">Enviar</button>
         </form>
+        </div>
       </section>
+      </div>
+<!-- Acá está el formulario de turnos -->  
+      <div class="bloque-derecho">
+      <section class="galeria-trabajo">
+        <h2>Nuestros trabajos</h2>
+        <div class="galeria-carrousel">
+          <button type="button" class="btn-carrousel btn-anterior" aria-label="Ver imagen anterior">
+            <img src="images/flechaanterior.png" alt="" class="flecha-anterior">
+          </button>
+          <div class="galeria-viewport">
+          <div class="galeria-pista">
+          <article class="galeria-item corte-cabello" id="corte">
+            <img src="images/cortedecabello.jpg" alt="Corte de cabello moderno" class="img-galeria" />
+          </article>
+          <article class="galeria-item afeitado-clasico" id="afeitado" >
+            <img src="images/afeitadoclasico.jpg" alt="Afeitado clásico" class="img-galeria"  />
+          </article>
+          <article class="galeria-item arreglo-barba" id="arreglo">
+            <img src="images/arreglodebarba.jpg" alt="Arreglo de barba" class="img-galeria"  />
+          </article>
+          <article class="galeria-item tratamiento-capilar" id="tratamiento">
+            <img src="images/tratamientocapilar.jpg" alt="Tratamiento capilar" class="img-galeria" />
+          </article>
+          </div>
+          </div>
+          <button type="button" class="btn-carrousel btn-siguiente" aria-label="Ver imagen siguiente">
+            <img src="images/flechasiguiente.png" alt="" class="flecha-siguiente">
+          </button>
+        </div>
+      </section>
+      <div class="info-extra">
+      <section class="horarios">
+        <div class="aviso-horario">
+          <h2>Horario</h2>
+          <p>Lunes a sábado: 9:00 AM - 7:00 PM.<br>
+            <span class="aviso-trabajo">Domingos NO TRABAJAMOS</span></p>
+        </div>
+      </section>
+      <section class="ubicacion">
+        <div class="aviso-ubicacion">
+          <h2>Ubicación</h2>
+          <p>Av. Siempre Viva 123, Ciudad Ejemplo</p>
+        </div>
+      </section>
+    </div>
+    </div>     
     </main>
-
-  <hr>
-
-    <!-- Aquí es la información de los contactos -->
-    <footer>
+    
+  <hr class="separador-contactos">
+<!-- Aquí es la información de los contactos -->
+    <footer class="footer-contacto">
       <section class="contactos">
         <h2>Contacto</h2>
         <p>Teléfono: (54) 11 1234-5678</p>
         <p>
           Email:
-          <a href="mailto:pruebacorreomidi12@gmail.com">pruebacorreomidi12@gmail.com</a>
+          <a href="mailto:pruebaacorreomidi12@gmail.com">pruebacorreomidi12@gmail.com</a>
         </p>
       </section>
-
-      <!-- Aquí es la información de las redes -->
+<!-- Aquí es la información de las redes -->
       <section class="redes">
         <h2>Redes Sociales</h2>
         <p>Seguinos en nuestras redes sociales y unite a la comunidad de barbers</p>
         <div class="contenedor-redes">
-        <a href="https://instagram.com/liiooac" target="_blank" rel="noopener noreferrer" class="icono-red">
-          <img src="images/igicono.png" alt="Icono de instagram">
+        <a href="https://instagram.com/tuusuario" target="_blank" rel="noopener noreferrer">
+          <img src="images/igicono.png" alt="Icono de instagram" class="icono-red">
         </a>
-        <a href="https://facebook.com/Lionel Florentín" target="_blank" rel="noopener noreferrer" class="icono-red">
-          <img src="images/facebookicono.png" alt="Icono de facebook">
+        <a href="https://facebook.com/Tu Usuario" target="_blank" rel="noopener noreferrer">
+          <img src="images/facebookicono.png" alt="Icono de facebook" class="icono-red">
         </a>
         </div>
-      </section>  
-
+      </section>
       <section class="contacto-form">
       <h2>Escribinos</h2>
-      
-      <form id="serviciosForm" name="serviciosForm" netlify>
+      <div class="formulario-contacto">
+      <form id="serviciosForm2" name="serviciosForm2" netlify>
         <input type="text" name="nombre" placeholder="Tu nombre" required />
-        <input type="text" name="email" placeholder="Tu email" required />
+        <input type="email" name="email" placeholder="Tu email" required />
         <textarea name="mensaje" placeholder="Escribe tu mensaje" rows="5" required></textarea>
         <button type="submit">Enviar</button>
       </form>
+      </div>
       </section>
     </footer>
-
-    <!-- El visor de imagen va aquí -->
-
+<!-- El visor de imagen va aquí -->
     <div id="visor" class="visor">
       <img id="visor-img" alt="">
     </div>
-
-    <!-- El boton de whatsapp va aquí -->
-
-    <div class="contenedor-whatsapp">
-      <a id="whatsapp-btn" href="https://wa.me/541112345678" target="_blank" rel="noopener noreferrer" class="icono-whatsapp" aria-label="Contactar por whatsapp">
-        <img src="images/iconowsp.png" alt="WhatsApp">
+<!-- El boton de whatsapp va aquí -->
+    <div class="contenedor-wsp">
+      <a id="whatsapp-btn" href="https://wa.me/541112345678" target="_blank" rel="noopener noreferrer" aria-label="Contactar por whatsapp">
+        <img src="images/iconowsp.png" alt="WhatsApp" class="icono-wsp">
       </a>
     </div>
-
     <script src="script.js"></script>
-
   </body>
 </html>
 

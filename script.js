@@ -87,3 +87,29 @@ if (serviciosForm) {
 
 });
 }
+
+// Programación de la galería carrousel //
+const btnAnterior = document.querySelector(".btn-anterior");
+const btnSiguiente = document.querySelector(".btn-siguiente");
+const pista = document.querySelector(".galeria-pista");
+const slides = document.querySelectorAll(".galeria-item");
+
+let indiceActual = 0;
+
+function moverCarrusel() {
+    const anchoSlide = slides[0].clientWidth;
+    pista.style.transform = `translateX(-${indiceActual * anchoSlide}px)`;
+}
+
+btnSiguiente.addEventListener("click", () => {
+    if (indiceActual < slides.length - 1) {
+        indiceActual++;
+        moverCarrusel();
+    }
+});
+btnAnterior.addEventListener("click", () => {
+    if (indiceActual > 0) {
+        indiceActual--;
+        moverCarrusel();
+    }
+});
